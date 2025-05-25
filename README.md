@@ -1,49 +1,120 @@
-# TDD / BDD Final Project Template
 
-This repository contains the template to be used for the Final Project for the Coursera course **Introduction to TDD/BDD**.
+# 🧪 TDD / BDD Final Project
 
-## Usage
+Welcome to the **Test-Driven Development (TDD) & Behavior-Driven Development (BDD) Final Project**! 🎉 This project helps you master writing tests first and describing software behavior clearly with BDD to ensure high-quality, maintainable software.
 
-This repository is to be used as a template to create your own repository in your own GitHub account. No need to Fork it as it has been set up as a Template. This will avoid confusion when making Pull Requests in the future.
+---
 
-From the GitHub **Code** page, press the green **Use this template** button to create your own repository from this template. 
+## 🚀 Project Overview
 
-Name your repo: `tdd-bdd-final-project`.
+This project guides you through:
 
-## Setup
+* Creating **fake products** and testing your data model 🛍️
+* Building a **REST API** with full test coverage 🔗
+* Designing a **minimalist Product Admin UI** and writing UI tests 🖥️
+* Loading test data and implementing **BDD scenarios** with Behave ⚙️
+* Automating UI actions via Selenium WebDriver for real browser testing 🕵️‍♂️
 
-After entering the lab environment you will need to run the `setup.sh` script in the `./bin` folder to install the prerequisite software.
+---
 
-```bash
-bash bin/setup.sh
+## 📋 Features Tested
+
+* **Create a Product** 🆕
+* **Read a Product** 🔍
+* **Update a Product** ✏️
+* **Delete a Product** ❌
+* **List All Products** 📜
+* **Search Products by Category** 🗂️
+* **Search Products by Availability** ✅ / ❌
+* **Search Products by Name** 🏷️
+
+---
+
+## 🛠️ Technologies & Tools
+
+* **Python 3**
+* **Flask** (REST API backend)
+* **Behave** (BDD testing framework)
+* **Selenium WebDriver** (UI automation)
+* **requests** (HTTP client for API testing)
+* **honcho** (process manager)
+* **Git** (version control)
+
+---
+
+## 📁 Project Structure
+
+```
+/features
+    /steps
+        load_steps.py       # Load background data into the system
+        web_steps.py        # Step definitions for UI tests
+    products.feature        # BDD feature file describing scenarios
+/app
+    models.py               # Product data model
+    routes.py               # REST API endpoints
+/tests
+    test_models.py          # Unit tests for models
+    test_routes.py          # API endpoint tests
 ```
 
-Then you must exit the shell and start a new one for the Python virtual environment to be activated.
+---
+
+## 📝 How to Run
+
+1. **Start the service**
 
 ```bash
-exit
+honcho start
 ```
 
-## Tasks
-
-In this project you will use good Test Driven Development (TDD) and Behavior Driven Development (BDD) techniques to write TDD test cases, BDD scenarios, and code, updating the following files:
+2. **Run unit tests**
 
 ```bash
-tests/test_models.py
-tests/test_routes.py
-service/routes.py
-features/products.feature
-features/steps/load_steps.py
+nosetests --with-coverage
 ```
 
-You will be given partial implementations in each of these files to get you started. Use those implementations as examples of the code you should write.
+3. **Run BDD tests**
 
-## License
+```bash
+behave
+```
 
-Licensed under the Apache License. See [LICENSE](/LICENSE)
+---
 
-## Author
+## ✍️ Writing Tests
 
-John Rofrano, Senior Technical Staff Member, DevOps Champion, @ IBM Research
+* Use **TDD** to write tests first, then implement the feature.
+* Use **BDD** to write user-focused scenarios in `products.feature`.
+* Step definitions in `web_steps.py` automate UI actions and assertions.
+* Background data loaded in `load_steps.py` ensures consistent test setup.
 
-## <h3 align="center"> © IBM Corporation 2023. All rights reserved. <h3/>
+---
+
+## ✅ Acceptance Criteria
+
+* All unit tests pass with **95%+ coverage**.
+* All 7 BDD scenarios pass:
+
+  * Read, Update, Delete a product
+  * List all products
+  * Search by Category, Availability, and Name
+
+---
+
+## 📚 Learning Outcomes
+
+* Understand TDD and BDD principles and workflows
+* Write clear, reusable test scenarios using Gherkin syntax
+* Automate web UI testing using Selenium WebDriver
+* Manage test data effectively for reliable test runs
+* Use Git for version control and collaboration
+
+---
+
+## 🤝 Contributing
+
+Feel free to open issues or submit pull requests to improve tests, add features, or enhance documentation!
+
+---
+
