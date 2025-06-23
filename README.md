@@ -1,6 +1,11 @@
 
 # 🧪 TDD / BDD Final Project
 
+<p float="left">
+    <img src="https://images.credly.com/size/340x340/images/63ed678c-4f4d-435d-b3af-e8d0c94627a2/image.png" width="300" />
+    <img src="https://i.postimg.cc/D03CQnMz/flask-and-python.png" width="300" />
+</p>
+
 Welcome to the **Test-Driven Development (TDD) & Behavior-Driven Development (BDD) Final Project**! 🎉 This project helps you master writing tests first and describing software behavior clearly with BDD to ensure high-quality, maintainable software.
 
 ---
